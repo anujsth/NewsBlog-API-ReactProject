@@ -1,13 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-item {
+  width: 80%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  background-color: white;
+  padding-right: 10px;
+}
+
+.news-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-image {
+  width: 200px;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.news-title {
+  text-align: start;
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.news-title:hover {
+  transform: scale(1.01);
+}
+
+.news-content {
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .news-item {
+    width: 90%;
+    flex-direction: column;
+  }
+  .news-image {
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+  }
 }
